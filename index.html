@@ -95,7 +95,7 @@
 </ul>
 </div>
 <form class="SearchForm"  method="get" action="https://google.com/search" autocomplete="off">
-  <input class="searchBox" name="q" type="text" placeholder="" autofocus>
+  <input class="searchBox" id="searchBox" name="q" type="text" placeholder="" autofocus>
 </form>
 </body>
 
@@ -622,4 +622,10 @@ function rainy() {
   document.querySelector("div[data-element=c_Obj" + whichObject + "]").className =""
 }
 
+    document.getElementById('searchBox').onblur = function (event) {
+        var blurEl = this;
+        setTimeout(function() {
+            blurEl.focus()
+        }, 10);
+    };
 </script>

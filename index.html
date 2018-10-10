@@ -521,7 +521,8 @@ function AddDayAndTemerature(InputDays, InputHours) {
   switch (((new Date().getDay()) + InputDays) % 7) {
       case 0:
         console.log("Sunday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sunday, " + Output.list[InputHours].main.temp + "C°" // Change the C° for another unit
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sunday, " + Output.list[InputHours].main.temp + "C°" // Change the C° for another unit; 
+        // use Math.floor(Output.list[InputHours].main.temp + 0.5) instead of Output.list[InputHours].main.temp to round the numbers
         break;
       case 1:
         console.log("Monday, " + Output.list[InputHours].main.temp + "C°")
